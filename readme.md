@@ -1,14 +1,14 @@
 # React-Vite template
 
-<p>React-Vite template is react project template that contains basic boilerplate of web application. This boilerplate contains bootstrap styled UI components such as Header, Footer, Card, Login and Register with form validation, state management and routing functionality.</p>
+<p>React-Vite template is a simple react project that contains basic boilerplate of web application that I use most of the time. This boilerplate contains bootstrap styled UI components such as Header, Footer, Card, Login and Register with form validation, state management and routing functionality.</p>
 
 ## Usage 
 
 ```
 // cloning the repo
-git clone 
+git clone https://github.com/Besufikad17/react-vite-template.git
 
-cd React-Vite Template
+cd react-vite-template
 
 // installing dependencies
 npm install / yarn add
