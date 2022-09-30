@@ -20,10 +20,4 @@ npx vite dev
 
 ## Preview
 
-[Home]()
-
-
-[Login]()
-
-
-[Register]()
+<img src="./media/web.gif" alt="preview">
