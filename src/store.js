@@ -5,12 +5,12 @@ const useUser = create(
     persist(
         (set) => {
             return {
-                user: {},
-                token: "",
+                user: null,
+                token: null,
 
                 setUser: (newUser) => set((state) => ({ ...state, user: newUser })),
                 setToken: (newToken) => set((state) => ({ ...state, token:newToken })),
-                logout: () => set((state) => ({ ...state,user : {}, token: "" }))
+                logout: () => set((state) => ({ ...state,user : null, token: null }))
             }
         },
         {

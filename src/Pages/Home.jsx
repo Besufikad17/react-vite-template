@@ -50,10 +50,7 @@ function Home() {
 
       {/* Footer */}
       <Footer
-        links={[
-          ["SignUp", "/signup"],
-          ["Login", "/login"],
-        ]}
+        links={[]}
       />
     </div>
   );

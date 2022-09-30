@@ -1,8 +1,12 @@
 import React from "react";
 import { useUser } from "../store";
+import { useNavigate } from "react-router";
 
 function Header(props) {
+  const logout = useUser((state) => state.logout);
   const user = useUser((state) => state.user);
+  const navigate = useNavigate();
+
   let i = 0;
   const links = props.links.map((link) => {
     i++;
@@ -14,6 +18,11 @@ function Header(props) {
       </li>
     );
   });
+
+  const submitLogout = () => {
+    logout()
+    navigate("/")  
+  }
 
   return (
     <div>
@@ -48,11 +57,18 @@ function Header(props) {
           >
             <ul className="navbar-nav me-auto">
               {user ? (
-                <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    {user.email}
-                  </a>
-                </li>
+                <div>
+                  <li className="nav-item">
+                    <a className="nav-link" href="/">
+                      {user.email}
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <button className="primary" onClick={() => submitLogout()}>
+                      Logout
+                    </button>
+                  </li>
+                </div>
               ) : (
                 links
               )}
